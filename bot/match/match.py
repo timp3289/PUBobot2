@@ -204,6 +204,7 @@ class Match:
 			self.teams[2].set([p for p in self.players if p not in self.captains])
 		elif pick_teams == "matchmaking":
 			#team_len = min(self.cfg['team_size'], int(len(self.players)/2))
+			team_len = self.cfg['team_size']
 			best_rating = sum(self.ratings.values())/2
 			best_team = min(
 				combinations(self.players, team_len),
